@@ -18,6 +18,8 @@
                 <include name="**"/>
             </fileset>
         </copy>
+        <mkdir dir="${target.dir}/public/Assets" mode="0777" />
+        <mkdir dir="${target.dir}/protected/Cache" mode="0777" />
     </target>
 
     <target name="config">
