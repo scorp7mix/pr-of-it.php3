@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="php3" default="build" basedir=".">
+
+    <target name="build" depends="vars, copy, config, composer, symlink" />
+
+    <target name="vars">
+        <property name="domain" value="adverplat.ru" />
+        <php returnProperty="datetime" function="date">
+            <param value="Y-m-d-H-i-s" />
+        </php>
+        <resolvepath propertyName="target.dir" path="/home/maxim/domains/pr-of-it.php3/${datetime}" />
+    </target>
+
+    <target name="copy">
+        <copy todir="${target.dir}">
+            <fileset dir="${project.basedir}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="config">
+        <copy file="${target.dir}/build/production/config.php" tofile="${target.dir}/protected/config.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="{{" endtoken="}}">
+                    <token key="domain" value="${domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+    </target>
+
+    <target name="composer">
+        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" error="stdout" />
+    </target>
+
+    <target name="symlink">
+        <symlink target="${target.dir}" link="/home/maxim/domains/pr-of-it.php3/current" overwrite="true" />
+    </target>
+
+</project>
