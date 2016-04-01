@@ -33,7 +33,7 @@
     </target>
 
     <target name="composer">
-        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" error="stdout" />
+        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" />
     </target>
 
     <target name="symlink">
