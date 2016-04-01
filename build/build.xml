@@ -16,7 +16,6 @@
         <copy todir="${target.dir}">
             <fileset dir="${project.basedir}">
                 <include name="**" />
-                <exclude name="build/**" />
             </fileset>
         </copy>
         <mkdir dir="${target.dir}/public/Assets" mode="0777" />
