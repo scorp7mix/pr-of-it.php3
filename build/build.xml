@@ -27,6 +27,7 @@
             <filterchain>
                 <replacetokens begintoken="{{" endtoken="}}">
                     <token key="domain" value="${domain}" />
+                    <token key="db.password" value="${db.password}" />
                 </replacetokens>
             </filterchain>
         </copy>
