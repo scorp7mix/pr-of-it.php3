@@ -2,7 +2,7 @@
 
 <project name="php3" default="build" basedir=".">
 
-    <target name="build" depends="vars, copy, config, composer, symlink" />
+    <target name="build" depends="vars, copy, config, composer, migrate, symlink" />
 
     <target name="vars">
         <property name="domain" value="adverplat.ru" />
@@ -34,7 +34,11 @@
     </target>
 
     <target name="composer">
-        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" />
+        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" error="stdout" />
+    </target>
+
+    <target name="migrate">
+        <exec dir="${target.dir}" command="php protected/t4.php /migrate/up" checkreturn="true" passthru="true" error="stdout" />
     </target>
 
     <target name="symlink">
