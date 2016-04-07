@@ -3,6 +3,7 @@
 namespace App\Migrations;
 
 use T4\Orm\Migration;
+use T4\Core\Std;
 
 class m_1459967175_createUserRoles
     extends Migration
@@ -34,7 +35,8 @@ class m_1459967175_createUserRoles
 
         $adminId = $this->db
             ->query("SELECT * FROM `users` WHERE `email` = 'admin@adverplat.ru'")
-            ->fetchScalar();
+            ->fetchObject(Std::class)
+            ->__id;
 
         $this->insert('user_roles_to_users', [
             '__user_id' => $adminId,
