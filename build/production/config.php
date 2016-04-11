@@ -12,6 +12,18 @@ return [
             'user'     => 'root',
             'password' => '{{db.password}}'
         ]
-    ]
+    ], 
+    
+    'mail' => [
+        'method' => 'smtp',
+        'host'   => 'smtp.gmail.com',
+        'port'   => 465,
+        'secure' => 'ssl',
+        'auth'   => [
+            'username' => 'scorp7mix',
+            'password' => '{{email.password}}',
+        ],
+        'sender' => 'Maxim Fedorov',
+    ],
 
 ];

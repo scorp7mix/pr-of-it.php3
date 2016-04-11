@@ -2,7 +2,7 @@
 
 <project name="php3" default="build" basedir=".">
 
-    <target name="build" depends="vars, copy, config, composer, migrate, unit_test, symlink" />
+    <target name="build" depends="vars, copy, config, composer, migrate, unit_test, crontab, symlink" />
 
     <target name="vars">
         <property name="domain" value="adverplat.ru" />
@@ -28,6 +28,7 @@
                 <replacetokens begintoken="{{" endtoken="}}">
                     <token key="domain" value="${domain}" />
                     <token key="db.password" value="${db.password}" />
+                    <token key="email.password" value="${email.password}" />
                 </replacetokens>
             </filterchain>
         </copy>
@@ -43,6 +44,10 @@
 
     <target name="unit_test">
         <exec dir="${target.dir}" command="./vendor/bin/phpunit ./test/UserTest.php" checkreturn="true" passthru="true" />
+    </target>
+
+    <target name="crontab">
+        <exec dir="${target.dir}" command="crontab ./build/crontab" passthru="true" />
     </target>
 
     <target name="symlink">
