@@ -34,15 +34,15 @@
     </target>
 
     <target name="composer">
-        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" error="stdout" />
+        <exec dir="${target.dir}" command="composer install" checkreturn="true" passthru="true" />
     </target>
 
     <target name="migrate">
-        <exec dir="${target.dir}" command="php protected/t4.php /migrate/up" checkreturn="true" passthru="true" error="stdout" />
+        <exec dir="${target.dir}" command="php protected/t4.php /migrate/up" checkreturn="true" passthru="true" />
     </target>
 
     <target name="unit_test">
-        <exec dir="${target.dir}" command="./vendor/bin/phpunit ./test/UserTest.php" checkreturn="true" passthru="true" error="stdout" />
+        <exec dir="${target.dir}" command="./vendor/bin/phpunit ./test/UserTest.php" checkreturn="true" passthru="true" />
     </target>
 
     <target name="symlink">
