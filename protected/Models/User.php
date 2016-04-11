@@ -37,7 +37,7 @@ class User
                 ?
                     implode(' ', [$this->firstName, $this->secondName, $this->lastName])
                 :
-                    implode(' ', [$this->firstName, $this->secondName])
+                    implode(' ', [$this->firstName, $this->lastName])
             :
                 $this->email
             ;

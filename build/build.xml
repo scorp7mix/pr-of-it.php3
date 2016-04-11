@@ -2,7 +2,7 @@
 
 <project name="php3" default="build" basedir=".">
 
-    <target name="build" depends="vars, copy, config, composer, migrate, symlink" />
+    <target name="build" depends="vars, copy, config, composer, migrate, unit_test, symlink" />
 
     <target name="vars">
         <property name="domain" value="adverplat.ru" />
@@ -39,6 +39,10 @@
 
     <target name="migrate">
         <exec dir="${target.dir}" command="php protected/t4.php /migrate/up" checkreturn="true" passthru="true" error="stdout" />
+    </target>
+
+    <target name="unit_test">
+        <exec dir="${target.dir}" command="./vendor/bin/phpunit ./test/UserTest.php" checkreturn="true" passthru="true" error="stdout" />
     </target>
 
     <target name="symlink">
