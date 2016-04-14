@@ -515,12 +515,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d167376e222701f857918c7f1ea6ddd87b38f1da"
+                "reference": "f664a55984b0c3fa867fe2bd489b784730a2b30d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d167376e222701f857918c7f1ea6ddd87b38f1da",
-                "reference": "d167376e222701f857918c7f1ea6ddd87b38f1da",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f664a55984b0c3fa867fe2bd489b784730a2b30d",
+                "reference": "f664a55984b0c3fa867fe2bd489b784730a2b30d",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +582,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-07 07:09:53"
+            "time": "2016-04-12 16:37:55"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -590,12 +590,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "7b18bbdad9880e09740959e90eec4b91c35a4aa9"
+                "reference": "313b5c28c975a0e9f35af4d36d00d15dfa2955e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/7b18bbdad9880e09740959e90eec4b91c35a4aa9",
-                "reference": "7b18bbdad9880e09740959e90eec4b91c35a4aa9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/313b5c28c975a0e9f35af4d36d00d15dfa2955e7",
+                "reference": "313b5c28c975a0e9f35af4d36d00d15dfa2955e7",
                 "shasum": ""
             },
             "require": {
@@ -605,7 +605,7 @@
                 "sebastian/exporter": "~1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5"
+                "phpunit/phpunit": "^5.4"
             },
             "suggest": {
                 "ext-soap": "*"
@@ -613,7 +613,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -638,7 +638,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-03-24 06:24:17"
+            "time": "2016-04-13 06:17:59"
         },
         {
             "name": "pr-of-it/t4",
@@ -646,12 +646,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pr-of-it/t4.git",
-                "reference": "48d264e633172468cff7c2c0893677fc04564c1b"
+                "reference": "257d1dd3b565f84b63e1e760c1cb3e994628c71a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pr-of-it/t4/zipball/48d264e633172468cff7c2c0893677fc04564c1b",
-                "reference": "48d264e633172468cff7c2c0893677fc04564c1b",
+                "url": "https://api.github.com/repos/pr-of-it/t4/zipball/257d1dd3b565f84b63e1e760c1cb3e994628c71a",
+                "reference": "257d1dd3b565f84b63e1e760c1cb3e994628c71a",
                 "shasum": ""
             },
             "require": {
@@ -681,7 +681,7 @@
                 "php",
                 "t4"
             ],
-            "time": "2016-04-11 12:14:36"
+            "time": "2016-04-12 08:28:02"
         },
         {
             "name": "psr/log",
